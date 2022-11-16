@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+     background: rgb(27, 27, 29);
+     background-image: url('https://picsum.photos/2560/1440');
+     background-size: auto;
+     font-family: 'Inter', sans-serif;
+     margin: 0;
+}
+
+.material-symbols-outlined {
+     font-variation-settings:
+     'FILL' 0,
+     'wght' 400,
+     'GRAD' 0,
+     'opsz' 48
+}
+
+#statusbar {
+     top: 0;
+     left: 0;
+     right: 0;
+     background: rgba(0, 0, 0, 0.5);
+     backdrop-filter: blur(0.1rem);
+     color: white;
+     height: 1.3rem;
+     padding: 0.3rem;
+     user-select: none;
+     -webkit-user-select: none;
+     -webkit-user-drag: none;
+}
+
+.time {
+     color: white;
+     float: left;
+     margin-top: 0rem;
+     margin-left: 0.5rem;
+     user-select: none;
+     -webkit-user-select: none;
+     -webkit-user-drag: none;
+}
+
+.ind-right {
+     margin-top: -0.2rem;
+     margin-right: 0.5rem;
+     float: right;
+     user-select: none;
+     -webkit-user-select: none;
+     -webkit-user-drag: none;
+}
+
+#dock {
+     position: fixed;
+     align-items: center;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+     color: white;
+     background: transparent;
+     padding: 1rem;
+}
+
+
+#qs_panel_button {
+     cursor: pointer;
+     user-select: none;
+     -webkit-user-select: none;
+     -webkit-user-drag: none;
+}
+
+#qs_bg {
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     position: fixed;
+     z-index: 9999999999;
+     background: rgba(0, 0, 0, 0.5);
+     transition: 0.3s;
+     backdrop-filter: saturate(2) blur(0.1rem);
+}
+#qs {
+     background: rgb(27, 27, 29);
+     width: 20rem;
+     height: 30rem;
+     margin-left: auto;
+     margin-right: -1.3rem;
+     float: right;
+     margin-top: 2.98rem;
+     border-radius: 2.3rem;
+     padding: 1rem;
+}
+
+.hide_qs_button {
+     color: rgb(176, 198, 255);
+     font-size: 2rem;
+     user-select: none;
+     -webkit-user-select: none;
+     -webkit-user-drag: none;
+     transition: 0.1s;
+     cursor: pointer;
+     float: right;
+     margin-right: 0.5rem;
+     margin-top: 0.5rem;
+     padding: 0.3rem;
+     padding-bottom: 0rem;
+     border-radius: 8rem;
+     padding-right: 0.4rem;
+     padding-left: 0.4rem;
+     padding-top: 0rem;
+     background: rgba(0, 0, 0, 0.3);
+}
+.hide_qs_button:active {
+     background: rgba(0, 0, 0, 0.4);
+}
+
+.qs_button_info_on {
+     background: rgb(176, 198, 255);
+     width: 7rem;
+     padding: 1rem;
+     padding-top: 0.5rem;
+     padding-bottom: 0.5rem;
+     padding-right: 1.4rem;
+     line-height: 0.5rem;
+     border-radius: 1.5rem;
+     user-select: none;
+     -webkit-user-select: none;
+     -webkit-user-drag: none;
+     transition: 0.13s;
+}
+.qs_button_info_on:hover {
+     background: rgb(186, 208, 255);
+     user-select: none;
+     -webkit-user-select: none;
+     -webkit-user-drag: none;
+}
+.qs_button_info_on:active {
+     background: rgb(206, 228, 255);
+     user-select: none;
+     -webkit-user-select: none;
+     -webkit-user-drag: none;
+}
+
+.hide {
+     display: none;
+}
