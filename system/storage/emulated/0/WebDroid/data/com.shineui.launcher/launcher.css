@@ -81,6 +81,36 @@ body {
      margin-left: 0.5rem;
 }
 
+.b_hidesm {
+     color: white;
+     font-weight: 900;
+     margin-top: 27rem;
+     margin-left: 1rem;
+     padding: 0.4rem;
+     background: rgba(27, 27, 29, 0.4);
+     width: 1rem;
+     height: 1.4rem;
+     padding-left: 0.7rem;
+     border-radius: 8rem;
+     cursor: pointer;
+     user-select: none;
+     -webkit-user-select: none;
+     -webkit-user-drag: none;
+}
+
+.closehidesm {
+     transform: rotate(0deg);
+     transition: 0.3s;
+}
+
+.closehidesm:hover {
+     transform: rotate(90deg);
+}
+
+.closehidesm:active {
+     transform: rotate(180deg);
+}
+
 #dock {
      position: fixed;
      align-items: center;
@@ -145,6 +175,19 @@ body {
      backdrop-filter: blur(0.2rem);
      transform: rotate(180deg) scale(0.8);
      z-index: 9999999999;
+}
+
+.closehideqs {
+     transform: rotate(0deg);
+     transition: 0.3s;
+}
+
+.closehideqs:hover {
+     transform: rotate(90deg);
+}
+
+.closehideqs:active {
+     transform: rotate(180deg);
 }
 
 .qs_button_info_on {
