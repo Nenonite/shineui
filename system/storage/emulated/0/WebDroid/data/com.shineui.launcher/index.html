@@ -10,8 +10,51 @@
      <title>Desktop</title>
 </head>
 <body>
-     <div id="statusbar">
-          <p class="time"></p>
+     <div id="bg"></div>
+     <!--QS panel-->
+     <div id="qs" class="hideqs">
+          <div title="You can't disable Wi-Fi." class="qs_button_info_on" style="cursor: not-allowed;">
+               <span class="material-symbols-outlined" style="transform: scale(1.2); margin-top: 0.2rem;">
+                    signal_wifi_4_bar
+               </span>
+               <p style="margin-top: -1rem; margin-left: 2.3rem;"><b>Wi-Fi</b></p>
+               <p style="opacity: 0.7; margin-left: 2.3rem;">Shine</p>
+          </div>
+          <div title="You can't disable Battery." class="qs_button_info_on" style="cursor: not-allowed; margin-left: 10.6rem; margin-top: -4.7rem;">
+               <span class="material-symbols-outlined" style="transform: scale(0.8); margin-left: -0.4rem; margin-top: 0.2rem;">
+                    battery_charging_full
+               </span>
+               <p style="margin-top: -1rem; margin-left: 1.2rem;"><b>Battery</b></p>
+               <p style="opacity: 0.7; margin-left: 1.2rem;">Charged</p>
+          </div>
+          <a target="_blank" href="https://github.com/ShineIndustries/shineui" style="width: 7rem; text-decoration: none; color: black; user-select: none; -webkit-user-select: none; -webkit-user-drag: none;">
+               <div class="qs_button_info_on" style="margin-top: 0.5rem;">
+                    <img src="img/githubsmall.png" style="transform: scale(0.9); margin-left: -0.5rem;">
+                    <p style="margin-top: -1.5rem; margin-left: 2rem;"><b>GitHub</b></p>
+                    <p style="opacity: 0.7; margin-left: 2rem;">ShineUI</p>
+               </div>
+          </a>
+     </div>
+
+
+
+     <div id="start-menu" class="smhide">
+
+     </div>
+
+     <!--Dock-->
+
+     <div id="hide_qs_button" class="hide" onclick="hide_qs()">
+          <span class="material-symbols-outlined">
+               expand_less
+          </span>
+     </div>
+     <div id="dock">
+          <p class="button-left" onclick="hide_qs(); show_sm()">
+               <span class="material-symbols-outlined">
+                    radio_button_checked
+               </span>
+          </p>
           <p class="ind-right">
                <span class="material-symbols-outlined" style="transform: scale(0.8);">
                     signal_cellular_nodata
@@ -25,46 +68,11 @@
                <span onclick="open_qs()" id="qs_panel_button" class="material-symbols-outlined" style="transform: scale(0.8); margin-left: 0.4rem;">
                     dashboard
                </span>
+               <a class="time"></a>
           </p>
      </div>
 
-     <div id="qs_bg" class="hide">
-          <div class="hide_qs_button" onclick="hide_qs()">
-               <span class="material-symbols-outlined">
-                    expand_less
-               </span>
-          </div>
-          <div id="qs">
-               <div title="You can't disable Wi-Fi." class="qs_button_info_on" style="cursor: not-allowed;">
-                    <span class="material-symbols-outlined" style="transform: scale(1.2); margin-top: 0.2rem;">
-                         signal_wifi_4_bar
-                    </span>
-                    <p style="margin-top: -1rem; margin-left: 2.3rem;"><b>Wi-Fi</b></p>
-                    <p style="opacity: 0.7; margin-left: 2.3rem;">Shine</p>
-               </div>
-               <div title="You can't disable Battery." class="qs_button_info_on" style="cursor: not-allowed; margin-left: 10.6rem; margin-top: -4.7rem;">
-                    <span class="material-symbols-outlined" style="transform: scale(0.8); margin-left: -0.4rem; margin-top: 0.2rem;">
-                         battery_charging_full
-                    </span>
-                    <p style="margin-top: -1rem; margin-left: 1.2rem;"><b>Battery</b></p>
-                    <p style="opacity: 0.7; margin-left: 1.2rem;">Charged</p>
-               </div>
-               <a target="_blank" href="https://github.com/ShineIndustries/shineui" style="width: 7rem; text-decoration: none; color: black; user-select: none; -webkit-user-select: none; -webkit-user-drag: none;">
-                    <div class="qs_button_info_on" style="margin-top: 0.5rem;">
-                         <img src="img/githubsmall.png" style="transform: scale(0.9); margin-left: -0.5rem;">
-                         <p style="margin-top: -1.5rem; margin-left: 2rem;"><b>GitHub</b></p>
-                         <p style="opacity: 0.7; margin-left: 2rem;">ShineUI</p>
-                    </div>
-               </a>
-          </div>
-     </div>
-
-     <div id="dock">
-          <p>
-               apps will be there soon
-          </p>
-     </div>
-
+     <!--time script-->
      <script>
           var shineindustries = document.getElementsByClassName('time')[0];
 
