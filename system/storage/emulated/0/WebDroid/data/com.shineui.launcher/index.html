@@ -79,11 +79,13 @@
      <!--time script-->
      <script>
      <script>
+          //в данном случае все переменные внутри локальные, то есть если попытаться вывести их снаружи ничего не произойдёт и будет ошибка в консоли браузера
           setInterval(function () {
                var date = new Date;
                var hours = date.getHours();
                var minutes = date.getMinutes();
                var seconds = date.getSeconds();
+               //фикс времени (в js если часы/минуты/секунды меньше 10 пишет одну цифру, то есть например 11:9:1)
                if(seconds < 10) {
                     seconds = `0${seconds}`
                }
@@ -93,6 +95,7 @@
                if(minutes < 10) {
                     minutes = `0${minutes}`
                }
+               //получаем элемент, в который записываем время и перезаписываем его новым текстом
                document.getElementByClassName('time').innerHTML = hours + ':' + minutes + ':' + seconds;
           }, 1000);
      </script>
