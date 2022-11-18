@@ -95,7 +95,7 @@
                     minutes = `0${minutes}`
                }
                //получаем элемент, в который записываем время и перезаписываем его новым текстом
-               document.getElementByClassName('time').innerHTML = hours + ':' + minutes + ':' + seconds;
+               document.querySelector('.time').innerHTML = hours + ':' + minutes + ':' + seconds;
           }, 1000);
      </script>
 </body>
